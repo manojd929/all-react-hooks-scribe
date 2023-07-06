@@ -6,6 +6,7 @@ import UseRefComp from './concepts/UseRefComp';
 import UseContextComp from './concepts/UseContext/UseContextComp';
 import UseContextRefactoredComp from './concepts/UseContextRefactored/UseContextRefactoredComp';
 import UseIdComp from './concepts/UseIdComp';
+import UseReducerComp from './concepts/UseReducerComp';
 import './style.css';
 
 const HOOK_MAP = {
@@ -16,10 +17,11 @@ const HOOK_MAP = {
   USE_CONTEXT: 'useContext',
   USE_CONTEXT_REFACTORED: 'useContext - Refactored Code',
   USE_ID: 'useId',
+  USE_REDUCER: 'useReducer',
 };
 
 const App = () => {
-  const [hook, setHook] = useState(HOOK_MAP.USE_ID);
+  const [hook, setHook] = useState(HOOK_MAP.USE_REDUCER);
 
   const getCompToRender = () => {
     switch (hook) {
@@ -37,6 +39,8 @@ const App = () => {
         return <UseContextRefactoredComp />;
       case HOOK_MAP.USE_ID:
         return <UseIdComp />;
+      case HOOK_MAP.USE_REDUCER:
+        return <UseReducerComp />;
     }
   };
 
@@ -122,6 +126,17 @@ const App = () => {
             onChange={(e) => setHook(e.target.value)}
           />
           <label htmlFor={HOOK_MAP.USE_ID}>useId</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id={HOOK_MAP.USE_REDUCER}
+            name="hook"
+            value={HOOK_MAP.USE_REDUCER}
+            checked={hook === HOOK_MAP.USE_REDUCER}
+            onChange={(e) => setHook(e.target.value)}
+          />
+          <label htmlFor={HOOK_MAP.USE_REDUCER}>useReducer</label>
         </div>
       </fieldset>
       <h3>{hook}</h3>
