@@ -8,6 +8,7 @@ import UseContextRefactoredComp from './concepts/UseContextRefactored/UseContext
 import UseIdComp from './concepts/UseIdComp';
 import UseReducerComp from './concepts/UseReducerComp';
 import UseCallbackComp from './concepts/UseCallbackComp';
+import UseCustomHookComp from './concepts/UseCustomHook/UseCustomHookComp';
 import './style.css';
 
 const HOOK_MAP = {
@@ -20,10 +21,11 @@ const HOOK_MAP = {
   USE_ID: 'useId',
   USE_REDUCER: 'useReducer',
   USE_CALLBACK: 'useCallback',
+  USE_CUSTOM_HOOK: 'useCustomHook',
 };
 
 const App = () => {
-  const [hook, setHook] = useState(HOOK_MAP.USE_CALLBACK);
+  const [hook, setHook] = useState(HOOK_MAP.USE_STATE);
 
   const getCompToRender = () => {
     switch (hook) {
@@ -45,6 +47,8 @@ const App = () => {
         return <UseReducerComp />;
       case HOOK_MAP.USE_CALLBACK:
         return <UseCallbackComp />;
+      case HOOK_MAP.USE_CUSTOM_HOOK:
+        return <UseCustomHookComp />;
     }
   };
 
@@ -152,6 +156,17 @@ const App = () => {
             onChange={(e) => setHook(e.target.value)}
           />
           <label htmlFor={HOOK_MAP.USE_CALLBACK}>useCallback</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id={HOOK_MAP.USE_CUSTOM_HOOK}
+            name="hook"
+            value={HOOK_MAP.USE_CUSTOM_HOOK}
+            checked={hook === HOOK_MAP.USE_CUSTOM_HOOK}
+            onChange={(e) => setHook(e.target.value)}
+          />
+          <label htmlFor={HOOK_MAP.USE_CUSTOM_HOOK}>useCustomHook</label>
         </div>
       </fieldset>
       <h3>Demo of {hook}</h3>
