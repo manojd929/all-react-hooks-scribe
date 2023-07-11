@@ -21,7 +21,7 @@ const HOOK_MAP = {
   USE_ID: 'useId',
   USE_REDUCER: 'useReducer',
   USE_CALLBACK: 'useCallback',
-  USE_CUSTOM_HOOK: 'useCustomHook - useData',
+  USE_CUSTOM_HOOK: 'CustomHook - useData',
 };
 
 const App = () => {
