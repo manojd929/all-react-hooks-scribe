@@ -4,7 +4,6 @@ const useData = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  console.log('HERE');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -17,7 +16,7 @@ const useData = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  return [data, loading, error];
+  return { data, loading, error };
 };
 
 export default useData;

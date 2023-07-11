@@ -2,19 +2,23 @@ import React from 'react';
 import useData from './useData';
 
 const UseCustomHookComp = () => {
-  const [data, loading, error] = useData();
+  let { data, loading, error } = useData();
 
-  if (error) return <div>{error}</div>;
-  if (loading) return <div>loading...</div>;
-  if (data) {
-    return (
-      <div>
-        {/* {data.map((d) => (
-          <div>{d.name}</div>
-        ))} */}
-      </div>
-    );
-  }
+  return (
+    <div>
+      {error && <div>{error}</div>}
+      {loading && <div>loading...</div>}
+      {data && (
+        <div>
+          <ul>
+            {data.slice(0, 10).map((d, index) => (
+              <li key={index}>{d.title}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default UseCustomHookComp;

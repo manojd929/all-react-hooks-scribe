@@ -21,11 +21,11 @@ const HOOK_MAP = {
   USE_ID: 'useId',
   USE_REDUCER: 'useReducer',
   USE_CALLBACK: 'useCallback',
-  USE_CUSTOM_HOOK: 'useCustomHook',
+  USE_CUSTOM_HOOK: 'useCustomHook - useData',
 };
 
 const App = () => {
-  const [hook, setHook] = useState(HOOK_MAP.USE_STATE);
+  const [hook, setHook] = useState(HOOK_MAP.USE_CUSTOM_HOOK);
 
   const getCompToRender = () => {
     switch (hook) {
@@ -65,7 +65,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_STATE}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_STATE}>useState</label>
+          <label htmlFor={HOOK_MAP.USE_STATE}>{HOOK_MAP.USE_STATE}</label>
         </div>
         <div>
           <input
@@ -76,7 +76,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_EFFECT}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_EFFECT}>useEffect</label>
+          <label htmlFor={HOOK_MAP.USE_EFFECT}>{HOOK_MAP.USE_EFFECT}</label>
         </div>
         <div>
           <input
@@ -87,7 +87,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_MEMO}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_MEMO}>useMemo</label>
+          <label htmlFor={HOOK_MAP.USE_MEMO}>{HOOK_MAP.USE_MEMO}</label>
         </div>
         <div>
           <input
@@ -98,7 +98,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_REF}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_REF}>useRef</label>
+          <label htmlFor={HOOK_MAP.USE_REF}>{HOOK_MAP.USE_REF}</label>
         </div>
         <div>
           <input
@@ -109,7 +109,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_CONTEXT}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_CONTEXT}>useContext</label>
+          <label htmlFor={HOOK_MAP.USE_CONTEXT}>{HOOK_MAP.USE_CONTEXT}</label>
         </div>
         <div>
           <input
@@ -121,7 +121,7 @@ const App = () => {
             onChange={(e) => setHook(e.target.value)}
           />
           <label htmlFor={HOOK_MAP.USE_CONTEXT_REFACTORED}>
-            useContext - Refactored Code
+            {HOOK_MAP.USE_CONTEXT_REFACTORED}
           </label>
         </div>
         <div>
@@ -133,7 +133,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_ID}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_ID}>useId</label>
+          <label htmlFor={HOOK_MAP.USE_ID}>{HOOK_MAP.USE_ID}</label>
         </div>
         <div>
           <input
@@ -144,7 +144,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_REDUCER}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_REDUCER}>useReducer</label>
+          <label htmlFor={HOOK_MAP.USE_REDUCER}>{HOOK_MAP.USE_REDUCER}</label>
         </div>
         <div>
           <input
@@ -155,7 +155,7 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_CALLBACK}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_CALLBACK}>useCallback</label>
+          <label htmlFor={HOOK_MAP.USE_CALLBACK}>{HOOK_MAP.USE_CALLBACK}</label>
         </div>
         <div>
           <input
@@ -166,7 +166,9 @@ const App = () => {
             checked={hook === HOOK_MAP.USE_CUSTOM_HOOK}
             onChange={(e) => setHook(e.target.value)}
           />
-          <label htmlFor={HOOK_MAP.USE_CUSTOM_HOOK}>useCustomHook</label>
+          <label htmlFor={HOOK_MAP.USE_CUSTOM_HOOK}>
+            {HOOK_MAP.USE_CUSTOM_HOOK}
+          </label>
         </div>
       </fieldset>
       <h3>Demo of {hook}</h3>
