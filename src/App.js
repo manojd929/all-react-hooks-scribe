@@ -57,116 +57,133 @@ const App = () => {
       <fieldset>
         <legend>Select Hook</legend>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_STATE}
-            name="hook"
-            value={HOOK_MAP.USE_STATE}
-            checked={hook === HOOK_MAP.USE_STATE}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_STATE}>{HOOK_MAP.USE_STATE}</label>
+          <label htmlFor={HOOK_MAP.USE_STATE}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_STATE}
+              name="hook"
+              value={HOOK_MAP.USE_STATE}
+              checked={hook === HOOK_MAP.USE_STATE}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_STATE}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_EFFECT}
-            name="hook"
-            value={HOOK_MAP.USE_EFFECT}
-            checked={hook === HOOK_MAP.USE_EFFECT}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_EFFECT}>{HOOK_MAP.USE_EFFECT}</label>
+          <label htmlFor={HOOK_MAP.USE_EFFECT}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_EFFECT}
+              name="hook"
+              value={HOOK_MAP.USE_EFFECT}
+              checked={hook === HOOK_MAP.USE_EFFECT}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_EFFECT}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_MEMO}
-            name="hook"
-            value={HOOK_MAP.USE_MEMO}
-            checked={hook === HOOK_MAP.USE_MEMO}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_MEMO}>{HOOK_MAP.USE_MEMO}</label>
+          <label htmlFor={HOOK_MAP.USE_MEMO}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_MEMO}
+              name="hook"
+              value={HOOK_MAP.USE_MEMO}
+              checked={hook === HOOK_MAP.USE_MEMO}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_MEMO}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_REF}
-            name="hook"
-            value={HOOK_MAP.USE_REF}
-            checked={hook === HOOK_MAP.USE_REF}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_REF}>{HOOK_MAP.USE_REF}</label>
+          <label htmlFor={HOOK_MAP.USE_REF}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_REF}
+              name="hook"
+              value={HOOK_MAP.USE_REF}
+              checked={hook === HOOK_MAP.USE_REF}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_REF}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_CONTEXT}
-            name="hook"
-            value={HOOK_MAP.USE_CONTEXT}
-            checked={hook === HOOK_MAP.USE_CONTEXT}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_CONTEXT}>{HOOK_MAP.USE_CONTEXT}</label>
+          <label htmlFor={HOOK_MAP.USE_CONTEXT}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_CONTEXT}
+              name="hook"
+              value={HOOK_MAP.USE_CONTEXT}
+              checked={hook === HOOK_MAP.USE_CONTEXT}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_CONTEXT}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_CONTEXT_REFACTORED}
-            name="hook"
-            value={HOOK_MAP.USE_CONTEXT_REFACTORED}
-            checked={hook === HOOK_MAP.USE_CONTEXT_REFACTORED}
-            onChange={(e) => setHook(e.target.value)}
-          />
           <label htmlFor={HOOK_MAP.USE_CONTEXT_REFACTORED}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_CONTEXT_REFACTORED}
+              name="hook"
+              value={HOOK_MAP.USE_CONTEXT_REFACTORED}
+              checked={hook === HOOK_MAP.USE_CONTEXT_REFACTORED}
+              onChange={(e) => setHook(e.target.value)}
+            />
+
             {HOOK_MAP.USE_CONTEXT_REFACTORED}
           </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_ID}
-            name="hook"
-            value={HOOK_MAP.USE_ID}
-            checked={hook === HOOK_MAP.USE_ID}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_ID}>{HOOK_MAP.USE_ID}</label>
+          <label htmlFor={HOOK_MAP.USE_ID}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_ID}
+              name="hook"
+              value={HOOK_MAP.USE_ID}
+              checked={hook === HOOK_MAP.USE_ID}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_ID}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_REDUCER}
-            name="hook"
-            value={HOOK_MAP.USE_REDUCER}
-            checked={hook === HOOK_MAP.USE_REDUCER}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_REDUCER}>{HOOK_MAP.USE_REDUCER}</label>
+          <label htmlFor={HOOK_MAP.USE_REDUCER}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_REDUCER}
+              name="hook"
+              value={HOOK_MAP.USE_REDUCER}
+              checked={hook === HOOK_MAP.USE_REDUCER}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_REDUCER}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_CALLBACK}
-            name="hook"
-            value={HOOK_MAP.USE_CALLBACK}
-            checked={hook === HOOK_MAP.USE_CALLBACK}
-            onChange={(e) => setHook(e.target.value)}
-          />
-          <label htmlFor={HOOK_MAP.USE_CALLBACK}>{HOOK_MAP.USE_CALLBACK}</label>
+          <label htmlFor={HOOK_MAP.USE_CALLBACK}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_CALLBACK}
+              name="hook"
+              value={HOOK_MAP.USE_CALLBACK}
+              checked={hook === HOOK_MAP.USE_CALLBACK}
+              onChange={(e) => setHook(e.target.value)}
+            />
+            {HOOK_MAP.USE_CALLBACK}
+          </label>
         </div>
         <div>
-          <input
-            type="radio"
-            id={HOOK_MAP.USE_CUSTOM_HOOK}
-            name="hook"
-            value={HOOK_MAP.USE_CUSTOM_HOOK}
-            checked={hook === HOOK_MAP.USE_CUSTOM_HOOK}
-            onChange={(e) => setHook(e.target.value)}
-          />
           <label htmlFor={HOOK_MAP.USE_CUSTOM_HOOK}>
+            <input
+              type="radio"
+              id={HOOK_MAP.USE_CUSTOM_HOOK}
+              name="hook"
+              value={HOOK_MAP.USE_CUSTOM_HOOK}
+              checked={hook === HOOK_MAP.USE_CUSTOM_HOOK}
+              onChange={(e) => setHook(e.target.value)}
+            />
             {HOOK_MAP.USE_CUSTOM_HOOK}
           </label>
         </div>
